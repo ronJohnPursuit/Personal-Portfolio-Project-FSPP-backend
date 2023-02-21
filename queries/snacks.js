@@ -25,13 +25,16 @@ const getOneSnack = async (id) => {
 const createSnack = async (snacks) => {
   try {
     const createdOneSnacks = await db.one(
-      "INSERT INTO snacks (name, fiber, protein, added_sugar, is_healthy, image) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
+      "INSERT INTO snacks (name,descript, starting_rate, add_service, add_serviceprice, add_service2, add_service2price, date_service, image) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
       [
         snacks.name,
-        snacks.fiber,
-        snacks.protein,
-        snacks.added_sugar,
-        snacks.is_healthy,
+        snacks.descript,
+        snacks.starting_rate,
+        snacks.add_service,
+        snacks.add_serviceprice,
+        snacks.add_service2,
+        snacks.add_service2price,
+        snacks.date_service,
         snacks.image,
       ]
     );
@@ -58,13 +61,16 @@ const deleteSnack = async (id) => {
 const updateSnack = async (id, snacks) => {
   try {
     const updatedSnacks = await db.one(
-      "UPDATE snacks SET name=$1, fiber=$2, protein=$3, added_sugar=$4, is_healthy=$5, image=$6 WHERE id=$7 RETURNING *",
+      "UPDATE snacks SET name=$1, descript=$2, starting_rate=$3, add_service=$4, add_serviceprice=$5, add_service2=$6, add_service2price=$7, date_service=$8, image=$9 WHERE id=$10 RETURNING *",
       [
         snacks.name,
-        snacks.fiber,
-        snacks.protein,
-        snacks.added_sugar,
-        snacks.is_healthy,
+        snacks.descript,
+        snacks.starting_rate,
+        snacks.add_service,
+        snacks.add_serviceprice,
+        snacks.add_service2,
+        snacks.add_service2price,
+        snacks.date_service,
         snacks.image,
         id,
       ]

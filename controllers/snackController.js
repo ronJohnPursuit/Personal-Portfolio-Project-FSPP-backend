@@ -7,13 +7,13 @@ const {
   createSnack,
   deleteSnack,
   updateSnack,
-} = require("../queries/Services");
+} = require("../queries/snacks");
 
 const {
   checkName,
   checkBoolean,
   validateAndSetImage,
-} = require("../validations/checkServices");
+} = require("../validations/checkSnacks");
 
 const snacks = express.Router();
 
@@ -36,6 +36,8 @@ snacks.get("/:id", async (req, res) => {
     res.status(404).json({ error: "not found" });
   }
 });
+
+// my values for my additional fees keeps coming back NULL !!!!
 
 snacks.post(
   "/",
@@ -88,9 +90,9 @@ snacks.delete("/:id", async (req, res) => {
 
 snacks.put(
   "/:id",
-  checkName,
-  checkBoolean,
-  validateAndSetImage,
+  // checkName,
+  // checkBoolean,
+  // validateAndSetImage,
   async (req, res) => {
     const { id } = req.params;
     const updatedSnacks = await updateSnack(id, req.body);
