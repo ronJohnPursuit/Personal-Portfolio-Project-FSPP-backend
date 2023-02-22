@@ -1,7 +1,7 @@
 // IMPORTS
 const express = require("express");
 const cors = require("cors");
-const ServiceController = require("./controllers/ServiceController");
+const servicesController = require("./controllers/servicesController");
 
 // CONFIGURATION
 const app = express();
@@ -9,11 +9,11 @@ const app = express();
 // MIDDLEWARE
 app.use(express.json());
 app.use(cors());
-app.use("/snacks", ServiceController);
+app.use("/Services", servicesController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to the Snacks App");
+  res.send("Welcome to Leaf Services App");
 });
 
 // 404 page
