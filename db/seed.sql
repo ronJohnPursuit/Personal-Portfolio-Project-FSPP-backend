@@ -21,7 +21,7 @@
 -- image TEXT DEFAULT'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
 -- );
 
-INSERT INTO snacks (name, descript, starting_rate, add_service, add_serviceprice, add_service2, add_service2price, date_service, image) VALUES
+INSERT INTO services (name, descript, starting_rate, add_service, add_serviceprice, add_service2, add_service2price, date_service, image) VALUES
 ('Mobile Notary Public','will travel to notarize any document needed', 20, 'per signature', 2.50,'', 0, '2023-2-20', 'https://image.cnbcfm.com/api/v1/image/106657061-1597086951668-taxtime.jpeg?v=1609957898&w=1600&h=900'),
 ('Online Notary Public','will notarize any document uploaded', 2.50, 'Loan Documents', 30,'Each add. document', 5,'2023-2-21', 'https://image.cnbcfm.com/api/v1/image/106657061-1597086951668-taxtime.jpeg?v=1609957898&w=1600&h=900'),
 ('Real Estate Loan Document Modification','will travel to notarize and modify Real Estate Loan Document', 100, '', 0,'', 0,'2023-2-22', 'https://image.cnbcfm.com/api/v1/image/106657061-1597086951668-taxtime.jpeg?v=1609957898&w=1600&h=900'),

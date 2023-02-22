@@ -4,7 +4,7 @@ CREATE DATABASE leaf_services;
 
 \c leaf_services; 
 
-DROP TABLE IF EXISTS snacks;
+DROP TABLE IF EXISTS services;
 
 -- CREATE TABLE snacks (
 -- id SERIAL PRIMARY KEY,
@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS snacks;
 -- image TEXT DEFAULT'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
 -- );
 
-CREATE TABLE snacks (
+CREATE TABLE services (
 id SERIAL PRIMARY KEY,
 name TEXT NOT NULL,
 descript TEXT NOT NULL,
